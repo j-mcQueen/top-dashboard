@@ -1,3 +1,6 @@
 :root {
+    --ff: 'Nunito', sans-serif;
+    font-family: var(--ff);
+    font-size: 10px;
     background-color: #f2f6ff;
 }
