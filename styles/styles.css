@@ -14,6 +14,9 @@ body {
 
 .nav {
     grid-row: 1 / 3;
+    display: grid;
+    grid-template-rows: 10% 70% 20%;
+    font-size: 1.6rem;
     background-color: #62A172;
 }
 
