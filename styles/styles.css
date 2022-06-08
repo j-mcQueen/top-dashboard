@@ -25,6 +25,11 @@ body {
     align-items: center;
 }
 
+.nav ul li a {
+    text-decoration: none;
+    color: #f2f6ff;
+}
+
 .nav svg {
     width: 24px;
     height: 24px;
