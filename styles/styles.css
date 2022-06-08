@@ -4,3 +4,8 @@
     font-size: 10px;
     background-color: #f2f6ff;
 }
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
