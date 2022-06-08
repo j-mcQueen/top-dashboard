@@ -42,3 +42,7 @@ body {
     fill: currentColor;
     margin: 7px 7px 7px 0;
 }
+
+nav, .secondary {
+    align-self: center;
+}
