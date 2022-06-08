@@ -31,6 +31,10 @@ body {
     color: #f2f6ff;
 }
 
+.nav ul li a:hover {
+    text-decoration: underline;
+}
+
 .nav svg {
     width: 32px;
     height: 32px;
