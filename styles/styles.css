@@ -7,7 +7,7 @@
 
 body {
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 10% 90%;
     grid-template-rows: 10% 90%;
     height: 100vh;
 }
@@ -16,7 +16,8 @@ body {
     grid-row: 1 / 3;
     display: grid;
     grid-template-rows: 10% 70% 20%;
-    font-size: 1.6rem;
+    justify-content: center;
+    font-size: 1.4rem;
     background-color: #62A172;
 }
 
@@ -35,5 +36,5 @@ body {
     height: 32px;
     color: #f2f6ff;
     fill: currentColor;
-    margin: 7px 10px;
+    margin: 7px 7px 7px 0;
 }
