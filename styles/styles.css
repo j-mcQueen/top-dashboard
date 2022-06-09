@@ -101,7 +101,7 @@ nav, .secondary {
 
 .content {
     display: grid;
-    grid-template-rows: 10% 60% 30%;
+    grid-template-rows: 10% 65% 25%;
 }
 
 .title > h1 {
@@ -115,5 +115,10 @@ nav, .secondary {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 5%;
+    gap: 3%;
+    margin: 0 5%;
+}
+
+.favourites > div {
+    border: 1px solid white;
 }
