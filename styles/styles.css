@@ -37,12 +37,15 @@ body {
     text-decoration: underline;
 }
 
-.nav svg, .head svg {
+.nav svg {
     width: 28px;
     height: 28px;
+    margin: 7px 7px 7px 0;
+}
+
+.nav svg, .head svg {
     color: #f2f6ff;
     fill: currentColor;
-    margin: 7px 7px 7px 0;
 }
 
 .logo {
@@ -62,19 +65,19 @@ nav, .secondary {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3%;
+    gap: 10px;
 }
 
 .head svg {
     width: 32px;
     height: 32px;
-    transition: 0.5s ease;
+    transition: 0.3s ease;
 }
 
 .head svg:hover {
     cursor: pointer;
     color: #FFC876;
-    transition: 0.5s ease;
+    transition: 0.3s ease;
 }
 
 .user {
@@ -84,6 +87,8 @@ nav, .secondary {
 }
 
 .user img {
+    width: 40px;
+    height: 40px;
     border-radius: 25px;
     border: 3px solid #f2f6ff;
 }
