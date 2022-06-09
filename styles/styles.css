@@ -102,4 +102,6 @@ nav, .secondary {
 .title > h1 {
     font-size: 2.8rem;
     color: var(--fc1);
+    text-align: center;
+    margin-top: 2%;
 }
