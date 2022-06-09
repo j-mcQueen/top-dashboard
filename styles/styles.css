@@ -39,9 +39,12 @@ body {
 }
 
 .nav svg {
+    margin: 7px 7px 7px 0;
+}
+
+.nav svg, .relevant svg {
     width: 28px;
     height: 28px;
-    margin: 7px 7px 7px 0;
 }
 
 .nav svg, .head svg {
@@ -175,4 +178,9 @@ cite {
 .fantasy {
     background-color: rgba(159, 251, 206, 0.4);
     border: 1px solid rgb(159, 251, 206);
+}
+
+.tc {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid #f2f6ff;
 }
