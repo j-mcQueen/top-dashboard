@@ -130,3 +130,12 @@ nav, .secondary {
     color: var(--fc1);
     font-size: 1.2rem;
 }
+
+.entry {
+    display: flex;
+}
+
+.relevant h2 {
+    font-size: 2rem;
+    color: #FFC876;
+}
