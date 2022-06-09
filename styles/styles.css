@@ -128,14 +128,47 @@ nav, .secondary {
     grid-template-columns: 1fr 1fr 1fr;
     place-items: center;
     color: var(--fc1);
-    font-size: 1.2rem;
 }
 
 .entry {
     display: flex;
+    align-items: center;
 }
 
 .relevant h2 {
     font-size: 2rem;
     color: #FFC876;
+}
+
+.relevant li {
+    margin: 15px 0;
+    font-size: 1.4rem;
+}
+
+.tag {
+    font-size: 1rem;
+    border-radius: 5px;
+    color: #f2f6ff;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.sf {
+    background-color: rgba(0, 81, 255, 0.4);
+    border: 1px solid rgb(0, 81, 255);
+}
+
+.fiction {
+    background-color: rgba(251, 186, 159, 0.4);
+    border: 1px solid rgb(251, 186, 159);
+}
+
+.horror {
+    background-color: rgba(255, 103, 103, 0.4);
+    border: 1px solid rgb(255, 103, 103);
+}
+
+.fantasy {
+    background-color: rgba(159, 251, 206, 0.4);
+    border: 1px solid rgb(159, 251, 206);
 }
