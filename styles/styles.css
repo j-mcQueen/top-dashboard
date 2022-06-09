@@ -122,3 +122,11 @@ nav, .secondary {
 .favourites > div {
     border: 1px solid white;
 }
+
+.relevant {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    color: var(--fc1);
+    font-size: 1.2rem;
+}
