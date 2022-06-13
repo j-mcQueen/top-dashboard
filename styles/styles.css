@@ -104,13 +104,12 @@ nav, .secondary {
 
 .content {
     display: grid;
-    grid-template-rows: 5% 70% auto;
+    grid-template-rows: 0.25fr 2fr 1fr;
     gap: 3%;
     overflow: scroll;
-    margin: 0 5%;
 }
 
-.title > h1 {
+.heading > h1{
     font-size: 2.8rem;
     color: var(--fc1);
     text-align: center;
@@ -122,10 +121,16 @@ nav, .secondary {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-template-rows: auto;
     gap: 3%;
+    margin: 0 5%;
 }
 
-.favourites > div {
+.favourites div {
     border: 1px solid white;
+}
+
+.book {
+    display: grid;
+    grid-template-rows: 7fr 1fr 1fr 1fr;
 }
 
 .relevant {
@@ -133,7 +138,7 @@ nav, .secondary {
     grid-template-columns: 1fr 0.5fr 1fr;
     justify-items: center;
     color: var(--fc1);
-    margin: 2% 0;
+    margin: 2% 5%;
 }
 
 .entry {
