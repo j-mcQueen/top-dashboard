@@ -120,22 +120,19 @@ nav, .secondary {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-template-rows: auto;
-    gap: 3%;
-    margin: 0 5%;
-}
-
-.favourites div {
-    border: 1px solid white;
+    gap: 1%;
+    margin: 0 3%;
 }
 
 .book {
     display: grid;
-    grid-template-rows: 7fr 1fr 1fr 1fr;
-}
-
-.title {
+    grid-template-rows: 7fr 0.5fr 1fr 0.5fr;
     color: var(--fc1);
     font-size: 1.4rem;
+}
+
+.title, .tags {
+    align-self: center;
 }
 
 #ce {
@@ -216,4 +213,19 @@ cite {
 .tc {
     background-color: rgba(0, 0, 0, 0.4);
     border: 1px solid #f2f6ff;
+}
+
+.space-opera {
+    background-color: rgba(2, 0, 116, 0.4);
+    border: 1px solid rgb(4, 0, 230);
+}
+
+.dyst {
+    background-color: rgba(140, 140, 140, 0.4);
+    border: 1px solid rgb(140, 140, 140);
+}
+
+.classics {
+    background-color: rgba(253, 224, 0, 0.4);
+    border: 1px solid rgb(253, 224, 0, 0.4);
 }
