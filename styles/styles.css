@@ -133,6 +133,31 @@ nav, .secondary {
     grid-template-rows: 7fr 1fr 1fr 1fr;
 }
 
+.title {
+    color: var(--fc1);
+    font-size: 1.4rem;
+}
+
+#ce {
+    background-image: url("../media/childhoodsend.jpeg");
+    background-size: cover;
+}
+
+#orwell {
+    background-image: url("../media/1984.jpeg");
+    background-size: cover;
+}
+
+#dune {
+    background-image: url("../media/dune.jpeg");
+    background-size: cover;
+}
+
+#slmr {
+    background-image: url("../media/silmarillion.jpeg");
+    background-size: cover;
+}
+
 .relevant {
     display: grid;
     grid-template-columns: 1fr 0.5fr 1fr;
