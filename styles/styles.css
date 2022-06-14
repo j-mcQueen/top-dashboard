@@ -126,7 +126,7 @@ nav, .secondary {
 
 .book {
     display: grid;
-    grid-template-rows: 7fr 0.5fr 1fr 0.5fr;
+    grid-template-rows: 5fr 0.5fr 1fr 0.5fr;
     color: var(--fc1);
     font-size: 1.4rem;
 }
@@ -136,23 +136,19 @@ nav, .secondary {
 }
 
 #ce {
-    background-image: url("../media/childhoodsend.jpeg");
-    background-size: cover;
+    background: no-repeat center/cover url("../media/childhoodsend.jpeg");
 }
 
 #orwell {
-    background-image: url("../media/1984.jpeg");
-    background-size: cover;
+    background: no-repeat center/cover url("../media/1984.jpeg");
 }
 
 #dune {
-    background-image: url("../media/dune.jpeg");
-    background-size: cover;
+    background: no-repeat center/cover url("../media/dune.jpeg");
 }
 
 #slmr {
-    background-image: url("../media/silmarillion.jpeg");
-    background-size: cover;
+    background: no-repeat center/cover url("../media/silmarillion.jpeg");
 }
 
 .relevant {
