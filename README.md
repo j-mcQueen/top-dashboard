@@ -24,3 +24,9 @@ An in-browser literature community dashboard designed to test my design skills a
 
 - Lacks robust responsiveness
 - Sidebar links are not active
+
+## notes
+
+- Sidebar icon svgs were sourced from [SVGBox](https://svgbox.net/)
+- Main content icon svgs were sourced from [Material Design Icons](https://materialdesignicons.com/)
+- All background images were sourced from Google Images matching the "Free to Share and Use" licence search condition
