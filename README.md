@@ -13,3 +13,9 @@ An in-browser literature community dashboard. This project was developed as part
 - Curating a compelling colour scheme and design
 - Ensuring images are sized consistently and positioned appropriately, mainly via the grid dimensions
 - Ensuring the grid containers and items inside the main body of content behave in an acceptable manner when the window is resized
+
+## technologies used
+
+- HTML
+- CSS
+- [Haikei](https://app.haikei.app/) for user icon colour gradient
