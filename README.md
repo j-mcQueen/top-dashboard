@@ -1,6 +1,6 @@
 # dashboard
 
-An in-browser literature community dashboard. This project was developed as part of The Odin Project's Full Stack Javascript course - check out my [live version]().
+An in-browser literature community dashboard designed to test my design skills and understanding of CSS grid. This project was developed as part of The Odin Project's Full Stack Javascript course - check out my [live version]().
 
 ## new things I've learned
 
@@ -19,3 +19,8 @@ An in-browser literature community dashboard. This project was developed as part
 - HTML
 - CSS
 - [Haikei](https://app.haikei.app/) for user icon colour gradient
+
+## known bugs/ areas for improvement
+
+- Lacks robust responsiveness
+- Sidebar links are not active
