@@ -1,6 +1,6 @@
 # dashboard
 
-An in-browser literature community dashboard designed to test my design skills and understanding of CSS grid. This project was developed as part of The Odin Project's Full Stack Javascript course - check out my [live version]().
+An in-browser literature community dashboard designed to test my design skills and understanding of CSS grid. This project was developed as part of The Odin Project's Full Stack Javascript course - check out my [live version](https://silverwish.github.io/top-dashboard/).
 
 ## new things I've learned
 
@@ -30,3 +30,4 @@ An in-browser literature community dashboard designed to test my design skills a
 - Sidebar icon svgs were sourced from [SVGBox](https://svgbox.net/)
 - Main content icon svgs were sourced from [Material Design Icons](https://materialdesignicons.com/)
 - All background images were sourced from Google Images matching the "Free to Share and Use" licence search condition
+- Book descriptions were edited from the synopses provided by Goodreads or Wikipedia
