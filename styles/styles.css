@@ -5,6 +5,8 @@
     font-family: var(--ff1);
     font-size: 10px;
     background-color: #2a2a2a;
+    min-width: 300px;
+    overflow-x: hidden;
 }
 
 body {
@@ -251,6 +253,7 @@ cite {
 @media only screen and (max-width: 1100px) {
     body {
         grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fit, 2fr);
     }
 
     .head svg {
@@ -283,8 +286,36 @@ cite {
         height: 36px;
     }
 
+    .content {
+        grid-template-rows: 0.25fr 1fr 0.75fr;
+    }
+
+    .favourites {
+        grid-template-rows: repeat(auto-fit, minmax(500px, 1fr));
+    }
+
     .book {
-        grid-template-rows: 10fr 1.5fr 2fr minmax(30px, 1fr);
+        grid-template-rows: 10fr 1.5fr 2fr minmax(50px, 1fr);
         grid-auto-rows: auto;
+    }
+
+    .relevant {
+        margin: 0 3% calc(3% + 76px) 3%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .relevant {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin: 0 3% calc(3% + 76px) 3%;
+    }
+
+    .relevant > div {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 5%;
+        width: 100%;
     }
 }
