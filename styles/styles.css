@@ -160,19 +160,19 @@ nav, .secondary {
 }
 
 #ce {
-    background: no-repeat center/cover url("../media/childhoodsend.jpeg");
+    background: no-repeat center/cover url("../media/childhoodsend.webp");
 }
 
 #orwell {
-    background: no-repeat center/cover url("../media/1984.jpeg");
+    background: no-repeat center/cover url("../media/1984.webp");
 }
 
 #dune {
-    background: no-repeat center/cover url("../media/dune.jpeg");
+    background: no-repeat center/cover url("../media/dune.webp");
 }
 
 #slmr {
-    background: no-repeat center/cover url("../media/silmarillion.jpeg");
+    background: no-repeat center/cover url("../media/silmarillion.webp");
 }
 
 .relevant {
