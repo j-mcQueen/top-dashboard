@@ -13,16 +13,17 @@ An in-browser literature community dashboard designed to test my design skills a
 - Curating a compelling colour scheme and design
 - Ensuring images are sized consistently and positioned appropriately, mainly via the grid dimensions
 - Ensuring the grid containers and items inside the main body of content behave in an acceptable manner when the window is resized
+- Positioning and formatting the navbar on mobile and tablet view
 
 ## technologies used
 
 - HTML
 - CSS
 - [Haikei](https://app.haikei.app/) for user icon colour gradient
+- [Convertio](https://convertio.co/) for image converting
 
 ## known bugs/ areas for improvement
 
-- Lacks robust responsiveness
 - Sidebar links are not active
 
 ## notes
