@@ -252,6 +252,10 @@ cite {
         grid-template-columns: 1fr;
     }
 
+    .head svg {
+        color: #FFC876;
+    }
+
     .desktop {
         display: none;
     }
