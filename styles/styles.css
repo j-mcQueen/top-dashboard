@@ -271,6 +271,12 @@ form > div {
     padding: 10px;
 }
 
+label {
+    display: block;
+    color: var(--fc1);
+    font-size: 1.2rem;
+}
+
 input[type="text"], input[type="number"] {
     appearance: none;
     background-color: inherit;
@@ -292,6 +298,11 @@ input[type=number]::-webkit-outer-spin-button { /* removes incrementer/decrement
 
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+.complete {
+    display: flex;
+    align-items: center;
 }
 
 input[type="checkbox"] {
