@@ -252,9 +252,7 @@ cite {
 
 .form-cntr {
     position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: none;
 }
 
 form {
