@@ -326,6 +326,24 @@ fieldset > div {
     font-size: 1.6rem;
 }
 
+.btn > button {
+    appearance: none;
+    background-color: rgb(139, 174, 249);
+    box-shadow: 0 0 5px 1px rgb(57, 64, 80) inset;
+    font-family: var(--ff1);
+    border: none;
+    border-radius: 4px;
+    color: var(--fc1);
+    padding: 5px 15px;
+    transition: 0.3s ease;
+}
+
+.btn > button:hover {
+    box-shadow: 0 0 1px 1px rgba(57, 64, 80) inset;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 1100px) {
     body {
         grid-template-columns: 1fr;
