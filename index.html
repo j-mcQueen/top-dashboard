@@ -256,7 +256,40 @@
         </section>
 
         <div class="form-cntr">
-            <form action="" method=""></form>
+            <form action="" method="">
+                <fieldset>
+                    <div>
+                        <label for="title"></label>
+                        <input id="title" name="title" type="text" placeholder="title" required>
+                        <span></span>
+                    </div>
+                    <div>
+                        <label for="author"></label>
+                        <input id="author" name="author" type="text" placeholder="author" required>
+                        <span></span>
+                    </div>
+                    <div>
+                        <label for="pages"></label>
+                        <input id="pages" name="pages" type="number" placeholder="pages" required>
+                        <span></span>
+                    </div>
+                    <div>
+                        <label for="tags"></label>
+                        <input id="tags" name="tags" type="text" placeholder="tags">
+                        <span></span>
+                    </div>
+                </fieldset>
+
+                <div>
+                    <label for="read"></label>
+                    <input id="read" name="read" type="radio">
+                    <span>have you read it?</span>
+                </div>
+
+                <div>
+                    <button type="button">submit</button>
+                </div>
+            </form>
         </div>
     </body>
 </html>
