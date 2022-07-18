@@ -271,6 +271,41 @@ form > div {
     padding: 10px;
 }
 
+input[type="text"], input[type="number"] {
+    appearance: none;
+    background-color: inherit;
+    color: var(--fc1);
+    border: 1px solid #a2a2a2;
+    border-radius: 4px;
+    height: 25px;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    outline: none;
+    border: 1px solid rgb(139, 174, 249);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { /* removes incrementer/decrementer */
+  -webkit-appearance: none; 
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    background-color: #E35518;
+    border-radius: 3px;
+    width: 18px;
+    height: 18px;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #13A422;
+}
+
 fieldset > div {
     padding: 10px;
 }
