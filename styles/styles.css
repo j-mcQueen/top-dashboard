@@ -64,12 +64,12 @@ a:hover {
     margin: 0 7px 0 0;
 }
 
-.nav svg, .relevant svg {
+.nav svg, .relevant svg, .form-cntr svg {
     width: 28px;
     height: 28px;
 }
 
-.nav svg, .head svg {
+.nav svg, .head svg, .form-cntr svg {
     color: var(--fc1);
     fill: currentColor;
 }
@@ -345,6 +345,18 @@ fieldset > div {
     box-shadow: 0 0 1px 1px rgba(57, 64, 80) inset;
     transition: 0.3s ease;
     cursor: pointer;
+}
+
+.form-cntr svg {
+    position: absolute;
+    right: 0;
+    transition: 0.4s ease;
+}
+
+.form-cntr svg:hover {
+    color: #fb5749;
+    cursor: pointer;
+    transition: 0.4s ease;
 }
 
 @media only screen and (max-width: 1100px) {
