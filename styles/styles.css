@@ -278,6 +278,12 @@ form > div {
     padding: 10px;
 }
 
+form p {
+    color: var(--fc1);
+    font-size: 1.4rem;
+    padding-bottom: 3px;
+}
+
 label {
     display: block;
     color: var(--fc1);
