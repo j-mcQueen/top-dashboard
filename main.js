@@ -1,11 +1,21 @@
-const newBook = document.querySelector(".actions svg");
-
-const openForm = () => {
+const formAccess = () => {
+    const newBook = document.querySelector(".actions svg");
     const form = document.querySelector(".form-cntr");
+    const close = document.querySelector(".form-cntr svg");
     const page = document.querySelector("#page");
-    form.setAttribute("style", "display: flex; justify-content: center; align-items: center; width: 100vw; height: 100vh");
-    page.style.opacity = "0.5";
-    // unfocus 
+    
+    const openForm = () => {
+        form.setAttribute("style", "display: flex;");
+        page.style.opacity = "0.3";
+    }
+    
+    const closeForm = () => {
+        form.setAttribute("style", "display: none;");
+        page.style.opacity = "1";
+    }
+    
+    newBook.addEventListener("click", openForm);
+    close.addEventListener("click", closeForm);
 }
 
-newBook.addEventListener("click", openForm);
+window.addEventListener("load", formAccess);
