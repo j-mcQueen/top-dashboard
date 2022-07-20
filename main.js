@@ -1,24 +1,25 @@
-const newBook = document.querySelector(".actions svg");
+const plus = document.querySelector(".actions svg");
 const formCntr = document.querySelector(".form-cntr");
 const form = document.querySelector("form");
-const close = document.querySelector(".form-cntr svg");
+const cross = document.querySelector(".form-cntr svg");
+const submit = document.querySelector(".btn button");
 const page = document.querySelector("#page");
-const bookList = document.querySelector(".favourites");
+const grid = document.querySelector(".favourites");
 
 // ---
 
-const openForm = () => {
+const open = () => {
     formCntr.setAttribute("style", "visibility: visible;");
     page.style.opacity = "0.3";
 }
-newBook.addEventListener("click", openForm);
+plus.addEventListener("click", open);
 
-const closeForm = () => {
+const close = () => {
     page.style.opacity = "1";
     formCntr.setAttribute("style", "visibility: none;");
     form.reset();
 }
-close.addEventListener("click", closeForm);
+cross.addEventListener("click", close);
 
 // ---
 
@@ -31,7 +32,7 @@ function Book(title, author, pages, read) {
     this.read = read;
 }
 
-const addBook = () => {
+const push = () => {
     const inputFields = document.querySelectorAll("fieldset input");
     let title = inputFields[0].value;
     let author = inputFields[1].value;
@@ -41,8 +42,6 @@ const addBook = () => {
     let novel = new Book(title, author, pages, read);
     library.push(novel);
     form.reset();
-    closeForm();
+    close();
 }
-
-const submit = document.querySelector(".btn button");
-submit.addEventListener("click", addBook);
+submit.addEventListener("click", push);
