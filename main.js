@@ -25,10 +25,10 @@ cross.addEventListener("click", close);
 
 const library = [];
 
-function Book(title, author, pages, read) {
+function Book(title, author, published, read) {
     this.title = title,
     this.author = author,
-    this.pages = pages,
+    this.publish = published,
     this.read = read;
 }
 
@@ -36,10 +36,10 @@ const push = () => {
     const inputFields = document.querySelectorAll("fieldset input");
     let title = inputFields[0].value;
     let author = inputFields[1].value;
-    let pages = Number(inputFields[2].value);
+    let published = Number(inputFields[2].value);
     let read = document.querySelector("input[type='checkbox']").checked;
 
-    let novel = new Book(title, author, pages, read); // get a published year instead of number of pages
+    let novel = new Book(title, author, published, read); // get a published year instead of number of pages
     library.push(novel);
     form.reset();
     close();
