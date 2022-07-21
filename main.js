@@ -39,9 +39,38 @@ const push = () => {
     let pages = Number(inputFields[2].value);
     let read = document.querySelector("input[type='checkbox']").checked;
 
-    let novel = new Book(title, author, pages, read);
+    let novel = new Book(title, author, pages, read); // get a published year instead of number of pages
     library.push(novel);
     form.reset();
     close();
+
+    const bookCntr = document.createElement("div");
+    bookCntr.setAttribute("class", `book ${title}`);
+    grid.appendChild(bookCntr);
+
+    const titleCntr = document.createElement("div");
+    titleCntr.setAttribute("class", "title");
+    bookCntr.appendChild(titleCntr);
+
+    const cite = document.createElement("cite");
+    const para = document.createElement("p");
+    cite.textContent = title;
+    para.textContent = author;
+    titleCntr.appendChild(cite);
+    titleCntr.appendChild(para);
+
+    const readCntr = document.createElement("div");
+    readCntr.setAttribute("class", "read-status");
+    const readBtn = document.createElement("button");
+    readBtn.textContent = "sample";
+    readCntr.appendChild(readBtn);
+    bookCntr.appendChild(readCntr);
+
+    const removeCntr = document.createElement("div");
+    removeCntr.setAttribute("class", "remove");
+    const removeBtn = document.createElement("button");
+    removeBtn.textContent = "remove";
+    removeCntr.appendChild(removeBtn);
+    bookCntr.appendChild(removeCntr);
 }
 submit.addEventListener("click", push);
