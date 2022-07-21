@@ -39,13 +39,13 @@ const push = () => {
     let published = Number(inputFields[2].value);
     let read = document.querySelector("input[type='checkbox']").checked;
 
-    let novel = new Book(title, author, published, read); // get a published year instead of number of pages
+    let novel = new Book(title, author, published, read);
     library.push(novel);
     form.reset();
     close();
 
     const bookCntr = document.createElement("div");
-    bookCntr.setAttribute("class", `book ${title}`);
+    bookCntr.setAttribute("class", "book new");
     grid.appendChild(bookCntr);
 
     const titleCntr = document.createElement("div");
@@ -53,24 +53,32 @@ const push = () => {
     bookCntr.appendChild(titleCntr);
 
     const cite = document.createElement("cite");
-    const para = document.createElement("p");
+    const para1 = document.createElement("p");
+    const para2 = document.createElement("p");
     cite.textContent = title;
-    para.textContent = author;
+    para1.textContent = author;
+    para2.textContent = published;
     titleCntr.appendChild(cite);
-    titleCntr.appendChild(para);
+    titleCntr.appendChild(para1);
+    titleCntr.appendChild(para2);
 
-    const readCntr = document.createElement("div");
-    readCntr.setAttribute("class", "read-status");
+    const btnCntr = document.createElement("div");
+    btnCntr.setAttribute("class", "btns");
+    const readStatus = document.createElement("div");
+    readStatus.setAttribute("class", "read-status");
     const readBtn = document.createElement("button");
-    readBtn.textContent = "sample";
-    readCntr.appendChild(readBtn);
-    bookCntr.appendChild(readCntr);
+    
+    read === false ? readBtn.textContent = "not read" : readBtn.textContent = "read";
+
+    readStatus.appendChild(readBtn);
+    btnCntr.appendChild(readStatus);
 
     const removeCntr = document.createElement("div");
     removeCntr.setAttribute("class", "remove");
     const removeBtn = document.createElement("button");
     removeBtn.textContent = "remove";
     removeCntr.appendChild(removeBtn);
-    bookCntr.appendChild(removeCntr);
+    btnCntr.appendChild(removeCntr);
+    bookCntr.appendChild(btnCntr);
 }
 submit.addEventListener("click", push);
