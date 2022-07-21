@@ -45,11 +45,10 @@ const push = () => {
     close();
 
     const bookCntr = document.createElement("div");
-    bookCntr.setAttribute("class", "book new");
-    grid.appendChild(bookCntr);
-
     const titleCntr = document.createElement("div");
+    bookCntr.setAttribute("class", "book new");
     titleCntr.setAttribute("class", "title");
+    grid.appendChild(bookCntr);
     bookCntr.appendChild(titleCntr);
 
     const cite = document.createElement("cite");
@@ -58,27 +57,22 @@ const push = () => {
     cite.textContent = title;
     para1.textContent = author;
     para2.textContent = published;
-    titleCntr.appendChild(cite);
-    titleCntr.appendChild(para1);
-    titleCntr.appendChild(para2);
+    titleCntr.append(cite, para1, para2);
 
     const btnCntr = document.createElement("div");
-    btnCntr.setAttribute("class", "btns");
     const readStatus = document.createElement("div");
-    readStatus.setAttribute("class", "read-status");
     const readBtn = document.createElement("button");
-    
+    btnCntr.setAttribute("class", "btns");
+    readStatus.setAttribute("class", "read-status");
     read === false ? readBtn.textContent = "not read" : readBtn.textContent = "read";
-
     readStatus.appendChild(readBtn);
-    btnCntr.appendChild(readStatus);
 
     const removeCntr = document.createElement("div");
-    removeCntr.setAttribute("class", "remove");
     const removeBtn = document.createElement("button");
+    removeCntr.setAttribute("class", "remove");
     removeBtn.textContent = "remove";
     removeCntr.appendChild(removeBtn);
-    btnCntr.appendChild(removeCntr);
+    btnCntr.append(readStatus, removeCntr);
     bookCntr.appendChild(btnCntr);
 }
 submit.addEventListener("click", push);
