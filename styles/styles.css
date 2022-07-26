@@ -15,28 +15,34 @@ body {
 
 #page {
     display: grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 8% 92%;
     grid-template-rows: 10% 90%;
     height: 100vh;
+    width: 100vw;
 }
 
 .nav {
     grid-row: 1 / 3;
     display: grid;
-    grid-template-rows: 10% 70% 20%;
+    grid-template-rows: 5% 95%;
     justify-content: center;
     font-size: 1.4rem;
     border-radius: 0 10px 10px 0;
-    background-color: #0051FF;
+    background-color: rgb(98, 121, 171);
 }
 
 .mobile {
     display: none;
 }
 
+nav {
+    display: flex;
+    justify-content: center;
+}
+
 .nav ul li {
     padding: 0 10px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 .nav ul li a {
@@ -62,9 +68,17 @@ a:hover {
 
 .nav svg {
     margin: 0 7px 0 0;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s ease;
 }
 
-.nav svg, .relevant svg, .form-cntr svg {
+.nav svg:hover {
+    color: #ffbe5d;
+    transition: 0.3s ease;
+}
+
+.relevant svg, .form-cntr svg {
     width: 28px;
     height: 28px;
 }
@@ -102,7 +116,7 @@ nav, .secondary {
 
 .head svg:hover {
     cursor: pointer;
-    color: #FFC876;
+    color: #febc5a;
     transition: 0.3s ease;
 }
 
@@ -344,7 +358,7 @@ fieldset > div {
 
 .btn > button {
     appearance: none;
-    background-color: #0051FF;
+    background-color: rgb(98, 121, 171);
     box-shadow: 0 0 6px 1px rgb(57, 64, 80) inset;
     font-family: var(--ff1);
     font-size: 1.4rem;
