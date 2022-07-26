@@ -362,8 +362,8 @@ fieldset > div {
 .form-cntr svg {
     color: #d7d7d7;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: -10px;
+    top: -10px;
 }
 
 .form-cntr svg:hover {
