@@ -140,30 +140,33 @@ nav, .secondary {
 
 .content {
     display: grid;
-    grid-template-rows: 0.25fr 2fr 1fr;
+    grid-template-rows: 0.25fr 2fr;
     gap: 3%;
     overflow: scroll;
+    padding-bottom: 5%;
+}
+
+.heading {
+    align-self: center;
 }
 
 .heading > h1 {
     font-size: 2.8rem;
     color: rgb(139, 174, 249);
     text-align: center;
-    margin-top: 1%;
 }
 
 .favourites {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-auto-rows: auto;
-    gap: 1%;
-    margin: 0 3%;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 300px));
+    grid-auto-rows: repeat(auto-fit, minmax(100px, 300px));
+    gap: 2% 1%;
+    margin: 0 2%;
 }
 
 .book {
     display: grid;
-    grid-template-rows: 5fr 0.5fr 1fr minmax(30px, 0.5fr);
-    grid-auto-rows: 50px;
     color: var(--fc1);
     font-size: 1.4rem;
 }
@@ -466,6 +469,7 @@ fieldset > div {
 
     .content {
         grid-template-rows: 0.25fr 1fr 0.75fr;
+        padding-bottom: 10%;
     }
 
     .favourites {
