@@ -64,7 +64,7 @@ const push = () => {
     const readBtn = document.createElement("button");
     btnCntr.setAttribute("class", "btns");
     readStatus.setAttribute("class", "read-status");
-    read === false ? readBtn.textContent = "not read" : readBtn.textContent = "read";
+    read === false ? (readBtn.textContent = "unread") : (readBtn.textContent = "read", readBtn.classList.toggle("active"));
     readStatus.appendChild(readBtn);
 
     const removeCntr = document.createElement("div");
@@ -74,5 +74,9 @@ const push = () => {
     removeCntr.appendChild(removeBtn);
     btnCntr.append(readStatus, removeCntr);
     bookCntr.appendChild(btnCntr);
+
+    readBtn.addEventListener("click", (e) => {
+        e.target.getAttribute("class") === "active" ? (e.target.textContent = "unread", e.target.classList.toggle("active")) : (e.target.textContent = "read", e.target.classList.toggle("active"));
+    });
 }
 submit.addEventListener("click", push);
