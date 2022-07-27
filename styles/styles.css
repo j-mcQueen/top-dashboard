@@ -160,115 +160,18 @@ nav, .secondary {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(100px, 300px));
-    grid-template-rows: repeat(auto-fit, minmax(100px, 200px));
-    gap: 2% 1%;
-    margin: 0 2%;
+    grid-template-rows: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 3%;
+    height: 100vh;
 }
 
 .book {
     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr;
     color: var(--fc1);
-    font-size: 1.4rem;
-}
-
-.tags {
-    display: flex;
-    padding: 10px 0;
-}
-
-.title, .tags {
-    align-self: center;
-}
-
-#ce {
-    background: no-repeat center/cover url("../media/childhoodsend.webp");
-}
-
-#orwell {
-    background: no-repeat center/cover url("../media/1984.webp");
-}
-
-#dune {
-    background: no-repeat center/cover url("../media/dune.webp");
-}
-
-#slmr {
-    background: no-repeat center/cover url("../media/silmarillion.webp");
-}
-
-.relevant {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    justify-items: center;
-    color: var(--fc1);
-    margin: 2% 5%;
-}
-
-.entry {
-    display: flex;
-    align-items: center;
-}
-
-.relevant h2 {
-    font-size: 2rem;
-    color: rgb(139, 174, 249);
-}
-
-.relevant li {
-    margin: 15px 0;
-    font-size: 1.4rem;
-}
-
-.tag {
-    font-size: 1rem;
-    border-radius: 5px;
-    color: #f2f6ff;
-    padding: 5px;
-    margin-left: 10px;
-}
-
-cite {
-    font-style: italic;
-}
-
-.sf {
-    background-color: rgba(0, 81, 255, 0.4);
-    border: 1px solid rgb(0, 81, 255);
-}
-
-.fiction {
-    background-color: rgba(251, 186, 159, 0.4);
-    border: 1px solid rgb(251, 186, 159);
-}
-
-.horror {
-    background-color: rgba(255, 103, 103, 0.4);
-    border: 1px solid rgb(255, 103, 103);
-}
-
-.fantasy {
-    background-color: rgba(60, 139, 101, 0.4);
-    border: 1px solid rgb(159, 251, 206);
-}
-
-.tc {
-    background-color: rgba(0, 0, 0, 0.4);
-    border: 1px solid #f2f6ff;
-}
-
-.space-opera {
-    background-color: rgba(2, 0, 116, 0.4);
-    border: 1px solid rgb(4, 0, 230);
-}
-
-.dyst {
-    background-color: rgba(140, 140, 140, 0.4);
-    border: 1px solid rgb(140, 140, 140);
-}
-
-.classics {
-    background-color: rgba(0, 157, 192, 0.4);
-    border: 1px solid rgb(0, 208, 255);
+    font-size: 1.8rem;
 }
 
 .form-cntr {
@@ -394,6 +297,18 @@ fieldset > div {
     border-radius: 25px;
 }
 
+.title {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+
+.title > cite {
+    font-style: italic;
+    color: #febc5a;
+}
+
 .btns {
     display: flex;
 }
@@ -479,27 +394,11 @@ fieldset > div {
     }
 
     .book {
-        grid-template-rows: 10fr 1.5fr 2fr minmax(50px, 1fr);
+        grid-template-rows: 1fr 0.5fr;
         grid-auto-rows: auto;
-    }
-
-    .relevant {
-        margin: 0 3% calc(3% + 76px) 3%;
     }
 }
 
 @media only screen and (max-width: 768px) {
-    .relevant {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        margin: 0 3% calc(3% + 76px) 3%;
-    }
 
-    .relevant > div {
-        display: flex;
-        align-items: center;
-        justify-content: start;
-        gap: 5%;
-        width: 100%;
-    }
 }
