@@ -76,7 +76,18 @@ const push = () => {
     bookCntr.appendChild(btnCntr);
 
     readBtn.addEventListener("click", (e) => {
-        e.target.getAttribute("class") === "active" ? (e.target.textContent = "unread", e.target.classList.toggle("active")) : (e.target.textContent = "read", e.target.classList.toggle("active"));
+        novel.read === true ? 
+                            (
+                                novel.read = false,
+                                e.target.textContent = "unread",
+                                e.target.classList.toggle("active")
+                            )
+                            :
+                            (
+                                novel.read = true,
+                                e.target.textContent = "read",
+                                e.target.classList.toggle("active")
+                            );
     });
 }
 submit.addEventListener("click", push);
