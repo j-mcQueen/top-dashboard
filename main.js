@@ -47,6 +47,7 @@ const push = () => {
     const bookCntr = document.createElement("div");
     const titleCntr = document.createElement("div");
     bookCntr.setAttribute("class", "book new");
+    bookCntr.setAttribute("data-id", library.indexOf(novel));
     titleCntr.setAttribute("class", "title");
     grid.appendChild(bookCntr);
     bookCntr.appendChild(titleCntr);
@@ -88,6 +89,21 @@ const push = () => {
                                 e.target.textContent = "read",
                                 e.target.classList.toggle("active")
                             );
+    });
+    console.log(library);
+
+    removeBtn.addEventListener("click", (e) => {
+        let index = e.target.parentElement.parentElement.parentElement.getAttribute("data-id");
+        library.splice(index, 1);
+        e.target.parentElement.parentElement.parentElement.remove();
+
+        let bookCntrs = document.querySelectorAll(".book");
+        let data_id = 0;
+        bookCntrs.forEach(cntr => {
+            // update data-id of book containers - ensures interface reflects array correctly
+            cntr.setAttribute("data-id", data_id);
+            data_id += 1;
+        });
     });
 }
 submit.addEventListener("click", push);
