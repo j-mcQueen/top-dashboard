@@ -1,5 +1,5 @@
 const plus = document.querySelector(".actions svg");
-const formCntr = document.querySelector(".form-cntr");
+const form_cntr = document.querySelector(".form-cntr");
 const form = document.querySelector("form");
 const cross = document.querySelector(".form-cntr svg");
 const submit = document.querySelector(".btn button");
@@ -9,14 +9,14 @@ const grid = document.querySelector(".favourites");
 // ---
 
 const open = () => {
-    formCntr.setAttribute("style", "visibility: visible;");
+    form_cntr.setAttribute("style", "visibility: visible;");
     page.style.opacity = "0.3";
 }
 plus.addEventListener("click", open);
 
 const close = () => {
     page.style.opacity = "1";
-    formCntr.setAttribute("style", "visibility: none;");
+    form_cntr.setAttribute("style", "visibility: none;");
     form.reset();
 }
 cross.addEventListener("click", close);
@@ -33,10 +33,10 @@ function Book(title, author, published, read) {
 }
 
 const push = () => {
-    const inputFields = document.querySelectorAll("fieldset input");
-    let title = inputFields[0].value;
-    let author = inputFields[1].value;
-    let published = Number(inputFields[2].value);
+    const input_fields = document.querySelectorAll("fieldset input");
+    let title = input_fields[0].value;
+    let author = input_fields[1].value;
+    let published = Number(input_fields[2].value);
     let read = document.querySelector("input[type='checkbox']").checked;
 
     let novel = new Book(title, author, published, read);
@@ -44,13 +44,13 @@ const push = () => {
     form.reset();
     close();
 
-    const bookCntr = document.createElement("div");
-    const titleCntr = document.createElement("div");
-    bookCntr.setAttribute("class", "book new");
-    bookCntr.setAttribute("data-id", library.indexOf(novel));
-    titleCntr.setAttribute("class", "title");
-    grid.appendChild(bookCntr);
-    bookCntr.appendChild(titleCntr);
+    const book_cntr = document.createElement("div");
+    const title_cntr = document.createElement("div");
+    book_cntr.setAttribute("class", "book new");
+    book_cntr.setAttribute("data-id", library.indexOf(novel));
+    title_cntr.setAttribute("class", "title");
+    grid.appendChild(book_cntr);
+    book_cntr.appendChild(title_cntr);
 
     const cite = document.createElement("cite");
     const para1 = document.createElement("p");
@@ -58,25 +58,25 @@ const push = () => {
     cite.textContent = title;
     para1.textContent = author;
     para2.textContent = published;
-    titleCntr.append(cite, para1, para2);
+    title_cntr.append(cite, para1, para2);
 
-    const btnCntr = document.createElement("div");
-    const readStatus = document.createElement("div");
-    const readBtn = document.createElement("button");
-    btnCntr.setAttribute("class", "btns");
-    readStatus.setAttribute("class", "read-status");
-    read === false ? (readBtn.textContent = "unread") : (readBtn.textContent = "read", readBtn.classList.toggle("active"));
-    readStatus.appendChild(readBtn);
+    const btn_cntr = document.createElement("div");
+    const read_status = document.createElement("div");
+    const read_btn = document.createElement("button");
+    btn_cntr.setAttribute("class", "btns");
+    read_status.setAttribute("class", "read-status");
+    read === false ? (read_btn.textContent = "unread") : (read_btn.textContent = "read", read_btn.classList.toggle("active"));
+    read_status.appendChild(read_btn);
 
-    const removeCntr = document.createElement("div");
-    const removeBtn = document.createElement("button");
-    removeCntr.setAttribute("class", "remove");
-    removeBtn.textContent = "remove";
-    removeCntr.appendChild(removeBtn);
-    btnCntr.append(readStatus, removeCntr);
-    bookCntr.appendChild(btnCntr);
+    const remove_cntr = document.createElement("div");
+    const remove_btn = document.createElement("button");
+    remove_cntr.setAttribute("class", "remove");
+    remove_btn.textContent = "remove";
+    remove_cntr.appendChild(remove_btn);
+    btn_cntr.append(read_status, remove_cntr);
+    book_cntr.appendChild(btn_cntr);
 
-    readBtn.addEventListener("click", (e) => {
+    read_btn.addEventListener("click", (e) => {
         novel.read === true ? 
                             (
                                 novel.read = false,
@@ -92,14 +92,14 @@ const push = () => {
     });
     console.log(library);
 
-    removeBtn.addEventListener("click", (e) => {
+    remove_btn.addEventListener("click", (e) => {
         let index = e.target.parentElement.parentElement.parentElement.getAttribute("data-id");
         library.splice(index, 1);
         e.target.parentElement.parentElement.parentElement.remove();
 
-        let bookCntrs = document.querySelectorAll(".book");
+        let book_cntrs = document.querySelectorAll(".book");
         let data_id = 0;
-        bookCntrs.forEach(cntr => {
+        book_cntrs.forEach(cntr => {
             // update data-id of book containers - ensures interface reflects array correctly
             cntr.setAttribute("data-id", data_id);
             data_id += 1;
