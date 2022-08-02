@@ -65,13 +65,13 @@ const push = () => {
     const read_btn = document.createElement("button");
     btn_cntr.setAttribute("class", "btns");
     read_status.setAttribute("class", "read-status");
-    read === false ? (read_btn.textContent = "UNREAD") : (read_btn.textContent = "READ", read_btn.classList.toggle("active"));
+    read === false ? (read_btn.textContent = "unread") : (read_btn.textContent = "read", read_btn.classList.toggle("active"));
     read_status.appendChild(read_btn);
 
     const remove_cntr = document.createElement("div");
     const remove_btn = document.createElement("button");
     remove_cntr.setAttribute("class", "remove");
-    remove_btn.textContent = "REMOVE";
+    remove_btn.textContent = "remove";
     remove_cntr.appendChild(remove_btn);
     btn_cntr.append(read_status, remove_cntr);
     book_cntr.appendChild(btn_cntr);
@@ -80,13 +80,13 @@ const push = () => {
         novel.read === true ? 
                             (
                                 novel.read = false,
-                                e.target.textContent = "UNREAD",
+                                e.target.textContent = "unread",
                                 e.target.classList.toggle("active")
                             )
                             :
                             (
                                 novel.read = true,
-                                e.target.textContent = "READ",
+                                e.target.textContent = "read",
                                 e.target.classList.toggle("active")
                             );
     });
