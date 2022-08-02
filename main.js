@@ -90,7 +90,6 @@ const push = () => {
                                 e.target.classList.toggle("active")
                             );
     });
-    console.log(library);
 
     remove_btn.addEventListener("click", (e) => {
         let index = e.target.parentElement.parentElement.parentElement.getAttribute("data-id");
