@@ -34,7 +34,7 @@ function Book(title, author, published, read) {
 
 const push = () => {
     const input_fields = document.querySelectorAll("fieldset input");
-    let title = input_fields[0].value.toUpperCase();
+    let title = input_fields[0].value.toUpperCase(); // uppercase here to ensure new grid item additions have a capitalised book title
     let author = input_fields[1].value;
     let published = Number(input_fields[2].value);
     let read = document.querySelector("input[type='checkbox']").checked;
