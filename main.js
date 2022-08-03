@@ -4,7 +4,7 @@ const form = document.querySelector("form");
 const cross = document.querySelector(".form-cntr svg");
 const submit = document.querySelector(".btn button");
 const page = document.querySelector("#page");
-const grid = document.querySelector(".favourites");
+const grid = document.querySelector(".reading-list");
 
 // ---
 
