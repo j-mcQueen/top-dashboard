@@ -1,8 +1,9 @@
 :root {
     --title: "Alata", sans-serif;
     --ff1: "Nunito", sans-serif;
-    --ff2: "Coiny", cursive;
     --fc1: #f2f6ff;
+    --fs1: 1.4rem;
+    --transition: 0.3s ease;
     font-family: var(--ff1);
     font-size: 10px;
     background-color: #2a2a2a;
@@ -19,29 +20,26 @@ body {
     width: 100vw;
 }
 
-.nav {
+.nav-links {
     position: fixed;
     display: grid;
-    grid-template-rows: 5% 95%;
+    grid-template-rows: 100%;
     justify-content: center;
+    border-radius: 0 10px 10px 0;
     background-color: #006989;
     height: 100vh;
     padding: 0 2%;
 }
 
-.mobile {
-    display: none;
-}
-
-.nav ul li {
+.nav-links ul li {
     padding: 10px 0;
 }
 
-.nav a {
+.nav-links a {
     color: var(--fc1);
 }
 
-.favourites a {
+.reading-list a {
     color: #FFC876;
 }
 
@@ -53,35 +51,26 @@ a:hover {
     text-decoration: underline;
 }
 
-.nav svg {
+nav svg {
     margin: 0;
     width: 36px;
     height: 36px;
-    transition: 0.3s ease;
+    transition: var(--transition);
 }
 
-.nav svg:hover {
-    color: #ffbe5d;
-    transition: 0.3s ease;
+nav svg:hover {
+    color: #febc5a;
+    transition: var(--transition);
 }
 
-.relevant svg, .form-cntr svg {
+.form-cntr svg {
     width: 28px;
     height: 28px;
 }
 
-.nav svg, .head svg, .form-cntr svg {
+.nav-links svg, .head svg, .form-cntr svg {
     color: var(--fc1);
     fill: currentColor;
-}
-
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--fc1);
-    font-family: var(--ff2);
-    font-size: 3.2rem;
 }
 
 nav, .secondary {
@@ -100,13 +89,13 @@ nav, .secondary {
 .head svg {
     width: 32px;
     height: 32px;
-    transition: 0.3s ease;
+    transition: var(--transition);
 }
 
 .head svg:hover {
     cursor: pointer;
     color: #febc5a;
-    transition: 0.3s ease;
+    transition: var(--transition);
 }
 
 .user {
@@ -123,7 +112,7 @@ nav, .secondary {
 }
 
 .user span {
-    font-size: 1.4rem;
+    font-size: var(--fs1);
     color: var(--fc1);
 }
 
@@ -147,7 +136,7 @@ nav, .secondary {
     text-align: center;
 }
 
-.favourites {
+.reading-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-template-rows: 250px;
@@ -190,7 +179,7 @@ form > div {
 
 form p {
     color: var(--fc1);
-    font-size: 1.4rem;
+    font-size: var(--fs1);
     padding-bottom: 3px;
 }
 
@@ -211,7 +200,7 @@ input[type="text"], input[type="number"] {
 
 input[type="text"]:focus, input[type="number"]:focus {
     outline: none;
-    border: 1px solid #FFC876;
+    border: 1px solid #febc5a;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
@@ -256,9 +245,9 @@ fieldset > div {
     background-color: #006f90;
     box-shadow: 0 0 6px 1px rgb(57, 64, 80) inset;
     font-family: var(--ff1);
-    font-size: 1.4rem;
+    font-size: var(--fs1);
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     color: var(--fc1);
     padding: 5px 20px;
 }
@@ -309,17 +298,17 @@ fieldset > div {
 
 .btns button {
     font-family: var(--ff1);
-    font-size: 1.4rem;
+    font-size: var(--fs1);
     appearance: none;
     width: 100%;
     height: 100%;
-    transition: 0.3s ease;
+    transition: var(--transition);
 }
 
 .btns button:hover {
     cursor: pointer;
     opacity: 0.8;
-    transition: 0.3s ease;
+    transition: var(--transition);
 }
 
 .read-status > button {
@@ -343,47 +332,41 @@ fieldset > div {
 
 @media only screen and (max-width: 1100px) {
     #page {
+        position: relative;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(auto-fit, 2fr);
+    }
+    
+    .head {
+        margin: 0;
     }
 
     .head svg {
         color: #FFC876;
     }
 
-    .desktop {
-        display: none;
-    }
-
-    .mobile {
-        display: block;
+    .nav-links {
+        grid-template-rows: 100%;
+        border-radius: 10px 10px 0 0;
+        padding: 0;
         position: fixed;
         bottom: 0;
+        height: calc(56px + 5%);
         width: 100%;
-        border-radius: 10px 10px 0 0;
     }
 
-    .mobile ul {
+    .nav-links ul {
         display: flex;
         place-content: center;
     }
 
-    .mobile ul li {
-        margin: 20px 0;
-    }
-
-    .mobile svg {
-        width: 36px;
-        height: 36px;
+    .nav-links ul li {
+        margin: 0 15px;
     }
 
     .content {
+        margin: 0;
         padding-bottom: calc(76px + 5%);
-    }
-
-    .book {
-        grid-template-rows: 1fr 0.5fr;
-        grid-auto-rows: auto;
     }
 }
 
