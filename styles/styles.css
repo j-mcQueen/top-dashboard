@@ -24,7 +24,7 @@ body {
     display: grid;
     grid-template-rows: 5% 95%;
     justify-content: center;
-    background-color: rgb(98, 121, 171);
+    background-color: #006989;
     height: 100vh;
     padding: 0 2%;
 }
@@ -143,7 +143,7 @@ nav, .secondary {
     font-family: var(--title);
     font-weight: bold;
     font-size: 3.6rem;
-    color: rgb(139, 174, 249);
+    color: #039dcc;
     text-align: center;
 }
 
@@ -178,10 +178,10 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 0 3px 1px #a2a2a2;
+    border: 1px solid #a2a2a2;
     background-color: #2a2a2a;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 form > div {
@@ -253,7 +253,7 @@ fieldset > div {
 
 .btn > button {
     appearance: none;
-    background-color: rgb(98, 121, 171);
+    background-color: #006f90;
     box-shadow: 0 0 6px 1px rgb(57, 64, 80) inset;
     font-family: var(--ff1);
     font-size: 1.4rem;
@@ -276,13 +276,13 @@ fieldset > div {
 }
 
 .form-cntr svg:hover {
-    color: #ff6969;
+    color: rgb(228, 83, 81);
     cursor: pointer;
 }
 
 .new {
-    background-color: rgb(51, 51, 51);
-    box-shadow: 0 0 1px 1px rgb(205, 205, 205);
+    background-color: inherit;
+    border: 1px solid rgb(140, 140, 140);
     border-radius: 5px;
 }
 
@@ -296,7 +296,7 @@ fieldset > div {
 .title > cite {
     font-family: var(--title);
     font-style: italic;
-    color: #febc5a;
+    color: #039dcc;
 }
 
 .btns {
@@ -313,28 +313,31 @@ fieldset > div {
     appearance: none;
     width: 100%;
     height: 100%;
+    transition: 0.3s ease;
 }
 
 .btns button:hover {
     cursor: pointer;
+    opacity: 0.8;
+    transition: 0.3s ease;
 }
 
 .read-status > button {
     color: var(--fc1);
-    background-color: #BB4430;
+    background-color: #903937;
     border: 1px solid rgb(255, 124, 124);
     border-radius: 0 0 0 5px;
 }
 
 .read-status > .active {
     color: var(--fc1);
-    background-color: #14591D;
+    background-color: #004F2D;
     border: 1px solid green;
 }
 
 .remove > button {
-    background-color: var(--fc1);
-    border: 1px solid #a2a2a2;
+    background-color: #cfcfcf;
+    border: 1px solid #8c8c8c;
     border-radius: 0 0 5px 0;
 }
 
