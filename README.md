@@ -22,7 +22,7 @@ This project was developed as part of The Odin Project's Full Stack Javascript c
 
 - Creating tidy JavaScript for dynamically creating new grid items
 - Ensuring the read status button returns "read" / "unread" appropriately on click
-- Maintaining correct `data-id` numbers when grid items are removed
+- Maintaining correct `data-id` numbers on remaining book containers when grid items are removed
 
 ## technologies used
 
