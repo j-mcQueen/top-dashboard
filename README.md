@@ -2,7 +2,7 @@
 
 Initially developed to test my design skills and understanding of CSS grid, I decided to expand the scope of this project to practice applying basic object and object constructor JavaScript. Additionally, I chose to simplify some of the design elements on the page (which included removing the CSS background images) from the previous version.
 
-This project was developed as part of The Odin Project's Full Stack Javascript course - check out my [live version](https://silverwish.github.io/top-dashboard/).
+This project was developed as part of The Odin Project's Full Stack Javascript course - check out my [live version](https://j-mcQueen.github.io/top-dashboard/).
 
 ## new things I've learned
 
