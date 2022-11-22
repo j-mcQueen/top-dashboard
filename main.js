@@ -32,53 +32,79 @@ class Book {
         this.publish = published,
         this.read = read;
     }
-}
+};
 
 const push = () => {
+    // -- get field data
+
     const input_fields = document.querySelectorAll("fieldset input");
-    let title = input_fields[0].value.toUpperCase(); // uppercase here to ensure new grid item additions have a capitalised book title
+    let title = input_fields[0].value.toUpperCase(); // ensure new grid items have a capitalised book title
     let author = input_fields[1].value;
     let published = Number(input_fields[2].value);
     let read = document.querySelector("input[type='checkbox']").checked;
 
+    // -- use field data
+
     let novel = new Book(title, author, published, read);
     library.push(novel);
+
+    // -- prepare form for next use
+
     form.reset();
     close();
 
-    const book_cntr = document.createElement("div");
-    const title_cntr = document.createElement("div");
-    book_cntr.setAttribute("class", "book new");
-    book_cntr.setAttribute("data-id", library.indexOf(novel));
-    title_cntr.setAttribute("class", "title");
-    grid.appendChild(book_cntr);
-    book_cntr.appendChild(title_cntr);
+    // -- prepare containing elements for form entry
+    
+    const build = (() => {
+        // containers
+        const book_cntr = document.createElement("div");
+        const title_cntr = document.createElement("div");
+        const btn_cntr = document.createElement("div");
+        // info
+        const cite = document.createElement("cite");
+        const para1 = document.createElement("p");
+        const para2 = document.createElement("p");
+        // buttons
+        const read_status = document.createElement("div");
+        const read_btn = document.createElement("button");
+        const remove_cntr = document.createElement("div");
+        const remove_btn = document.createElement("button");
 
-    const cite = document.createElement("cite");
-    const para1 = document.createElement("p");
-    const para2 = document.createElement("p");
-    cite.textContent = title;
-    para1.textContent = author;
-    para2.textContent = published;
-    title_cntr.append(cite, para1, para2);
+        return { 
+            book_cntr, title_cntr, btn_cntr, 
+            cite, para1, para2,
+            read_status, read_btn, remove_cntr, remove_btn,
+        }; 
+    })();
 
-    const btn_cntr = document.createElement("div");
-    const read_status = document.createElement("div");
-    const read_btn = document.createElement("button");
-    btn_cntr.setAttribute("class", "btns");
-    read_status.setAttribute("class", "read-status");
-    read === false ? (read_btn.textContent = "unread") : (read_btn.textContent = "read", read_btn.classList.toggle("active"));
-    read_status.appendChild(read_btn);
+    const organise = ((access) => {
+        //     // structure containers
+        access.book_cntr.setAttribute("class", "book new");
+        access.book_cntr.setAttribute("data-id", library.indexOf(novel));
+        access.title_cntr.setAttribute("class", "title");
+        grid.appendChild(access.book_cntr);
+        access.book_cntr.appendChild(access.title_cntr);
+        //     // structure info
+        access.cite.textContent = title;
+        access.para1.textContent = author;
+        access.para2.textContent = published;
+        access.title_cntr.append(access.cite, access.para1, access.para2);
+        //     // structure buttons
+        access.remove_cntr.setAttribute("class", "remove");
+        access.remove_btn.textContent = "remove";
+        access.remove_cntr.appendChild(access.remove_btn);
+        access.btn_cntr.append(access.read_status, access.remove_cntr);
+        access.book_cntr.appendChild(access.btn_cntr);
+    })(build);
 
-    const remove_cntr = document.createElement("div");
-    const remove_btn = document.createElement("button");
-    remove_cntr.setAttribute("class", "remove");
-    remove_btn.textContent = "remove";
-    remove_cntr.appendChild(remove_btn);
-    btn_cntr.append(read_status, remove_cntr);
-    book_cntr.appendChild(btn_cntr);
+    build.btn_cntr.setAttribute("class", "btns");
+    build.read_status.setAttribute("class", "read-status");
+    read === false ? (build.read_btn.textContent = "unread") : (build.read_btn.textContent = "read", build.read_btn.classList.toggle("active"));
+    build.read_status.appendChild(build.read_btn);
 
-    read_btn.addEventListener("click", (e) => {
+    // -- add functionality to read button
+
+    build.read_btn.addEventListener("click", (e) => {
         novel.read === true ? 
                             (
                                 novel.read = false,
@@ -93,7 +119,9 @@ const push = () => {
                             );
     });
 
-    remove_btn.addEventListener("click", (e) => {
+    //  -- add functionality to remove button
+
+    build.remove_btn.addEventListener("click", (e) => {
         let index = e.target.parentElement.parentElement.parentElement.getAttribute("data-id");
         library.splice(index, 1);
         e.target.parentElement.parentElement.parentElement.remove();
