@@ -25,11 +25,13 @@ cross.addEventListener("click", close);
 
 const library = [];
 
-function Book(title, author, published, read) {
-    this.title = title,
-    this.author = author,
-    this.publish = published,
-    this.read = read;
+class Book {
+    constructor(title, author, published, read) {
+        this.title = title,
+        this.author = author,
+        this.publish = published,
+        this.read = read;
+    }
 }
 
 const push = () => {
