@@ -53,7 +53,7 @@ const push = () => {
     form.reset();
     close();
 
-    // -- prepare containing elements for form entry
+    // -- build new book entry elements
     
     const build = (() => {
         // containers
@@ -76,6 +76,8 @@ const push = () => {
             read_status, read_btn, remove_cntr, remove_btn,
         }; 
     })();
+
+    // -- arrange new form entry elements
 
     const organise = ((access) => {
         //     // structure containers
@@ -104,25 +106,20 @@ const push = () => {
 
     // -- add functionality to read button
 
+    const toggle_read = (read, text, e) => {
+        novel.read = read;
+        e.target.textContent = text;
+        e.target.classList.toggle("active");
+    };
+
     build.read_btn.addEventListener("click", (e) => {
-        novel.read === true ? 
-                            (
-                                novel.read = false,
-                                e.target.textContent = "unread",
-                                e.target.classList.toggle("active")
-                            )
-                            :
-                            (
-                                novel.read = true,
-                                e.target.textContent = "read",
-                                e.target.classList.toggle("active")
-                            );
+        novel.read === true ? toggle_read(false, "unread", e) : toggle_read(true, "read", e);
     });
 
     //  -- add functionality to remove button
 
     build.remove_btn.addEventListener("click", (e) => {
-        let index = e.target.parentElement.parentElement.parentElement.getAttribute("data-id");
+        let index = e.target.parentElement.parentElement.parentElement.getAttribute("data-id"); 
         library.splice(index, 1);
         e.target.parentElement.parentElement.parentElement.remove();
 
